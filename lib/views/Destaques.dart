@@ -36,7 +36,7 @@ class _DestaquesState extends State<Destaques> {
                   ),
                   //child: Text(destaques[index]['nome']!),
                 ),onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const DetalhesDoServico(teste: 'xxx',)));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => DetalhesDoServico(teste: '$index',)));
                 },
               ),
             );
@@ -77,43 +77,47 @@ class _TodosOsDestaquesState extends State<TodosOsDestaques> {
                 padding: const EdgeInsets.only(bottom: 5),
                 child: Column(
                   children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width - 10,
-                      height: 200,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.blue
-                      ),
-                      child: const Stack(
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.only(left: 3, right: 4, top: 3),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Icon(Icons.account_circle, color: Colors.white,),
-                                Icon(Icons.heart_broken, color: Colors.white,),
-                              ],
-                            ),
-                          ),
-                          Positioned(
-                            bottom: 0, left:0, right:0,
-                            child: Padding(
-                              padding: EdgeInsets.only(bottom: 3),
+                    GestureDetector(
+                      child: Container(
+                        width: MediaQuery.of(context).size.width - 10,
+                        height: 200,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.blue
+                        ),
+                        child: const Stack(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(left: 3, right: 4, top: 3),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Icon(Icons.star, color: Colors.white),
-                                  Icon(Icons.star, color: Colors.white),
-                                  Icon(Icons.star, color: Colors.white),
-                                  Icon(Icons.star, color: Colors.white),
-                                  Icon(Icons.star, color: Colors.white)
+                                  Icon(Icons.account_circle, color: Colors.white,),
+                                  Icon(Icons.heart_broken, color: Colors.white,),
                                 ],
                               ),
                             ),
-                          ),
-                        ],
-                      ),
+                            Positioned(
+                              bottom: 0, left:0, right:0,
+                              child: Padding(
+                                padding: EdgeInsets.only(bottom: 3),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(Icons.star, color: Colors.white),
+                                    Icon(Icons.star, color: Colors.white),
+                                    Icon(Icons.star, color: Colors.white),
+                                    Icon(Icons.star, color: Colors.white),
+                                    Icon(Icons.star, color: Colors.white)
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ), onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => DetalhesDoServico(teste: '$index',)));
+                      },
                     ),
                     //const Center(child: Text("Destaque")),
                   ],

@@ -39,7 +39,7 @@ class _ServicosState extends State<Servicos> {
               ),
               //child: Text(servicos[index]['nome']!),
             ),onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const DetalhesDoServico(teste: 'xxx',)));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => DetalhesDoServico(teste: '$index',)));
               },
           );
         },
@@ -118,7 +118,7 @@ class _TodosOsServicosState extends State<TodosOsServicos> {
                           ],
                         ),
                       ), onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => const DetalhesDoServico(teste: 'xxx',)));
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => DetalhesDoServico(teste: '$index',)));
                       },
                     ),
                     //const Center(child: Text("Serviço Destaque")),
