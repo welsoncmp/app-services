@@ -3,9 +3,9 @@ import 'package:services/views/Inicio.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       home: Inicio(),
       debugShowCheckedModeBanner: false,
-    )
+    ),
   );
 }

@@ -230,8 +230,8 @@ class _DetalhesDoServicoState extends State<DetalhesDoServico> {
                                          TabBar(
                                           tabs: [
                                             Tab(child: Row(children: [Image.asset('assets/icons/reviews.png', width: 20, color: Colors.black54,), const Text(' Avaliações')],),),
-                                            Tab(child: Row(children: [Image.asset('assets/icons/city-worker.png', width: 20, color: Colors.black54), const Text(' Realizados')],),),
-                                            Tab(child: Row(children: [Image.asset('assets/icons/health-worker-form.png', width: 20, color: Colors.black54), const Text(' Habilidades')],),),
+                                            Tab(child: Row(children: [Image.asset('assets/icons/badge-check.png', width: 20, color: Colors.black54), const Text(' Realizados')],),),
+                                            Tab(child: Row(children: [Image.asset('assets/icons/award.png', width: 20, color: Colors.black54), const Text(' Habilidades')],),),
                                           ],
                                         ),
                                         Expanded(
